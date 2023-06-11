@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap');
+
+body, html {
+	font-family: 'Noto Sans TC', sans-serif;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+body {
+	background: #020202;
+	color: #fff;
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+button {
+	cursor: pointer;
+	background: transparent;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+.h3 {
+	font-size: 80px;
+	@media (max-width: $media768) {
+		font-size: 32px;
+	}
+}
+.h4 {
+	font-size: 32px;
+	@media (max-width: $media768) {
+		font-size: 20px;
+	}
+}
+
+.container {
+	width: 100%;
+	padding-right: 0.75rem;
+	padding-left: 0.75rem;
+	margin-right: auto;
+	margin-left: auto;
+	@media (min-width: $media576) {
+		max-width: 540px;
+	}
+	@media (min-width: $media768) {
+		max-width: 720px;
+	}
+	@media (min-width: $media992) {
+		max-width: 960px;
+	}
+	@media (min-width: $media1200) {
+		max-width: 1140px;
+	}
+	@media (min-width: $media1400) {
+		max-width: 1320px;
+	}
+}
+
+.d-block {
+	display: block;
+}
+.d-flex {
+	display: flex;
+}
+.flex-column {
+	flex-direction: column;
+}
+.justify-content-center {
+	justify-content: center;
+}
+.justify-content-evenly {
+	justify-content: space-evenly;
+}
+.justify-content-around {
+	justify-content: space-around;
+}
+.justify-content-between {
+	justify-content: space-between;
+}
+.align-items-center {
+	align-items: center;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.fw-700 {
+	font-weight: 700;
+}
+.fw-900 {
+	font-weight: 900;
+}
+
+$colors: (
+  white: "#fff",
+  black: "#000",
+  dark: "#020202"
+);
+
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value !important;
+  }
+  .bg-#{$key} {
+    background: $value !important;
+  }
+}

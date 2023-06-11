@@ -1,0 +1,15 @@
+$media1400: 1400px;
+$media1200: 1200px;
+$media1024: 1024px;
+$media992: 992px;
+$media768: 768px;
+$media576: 576px;
+$media414: 414px;
+$media375: 375px;
+
+@import 'reset';
+@import 'base';
+@import 'spacers';
+@import 'header';
+@import 'index';
+@import 'footer';

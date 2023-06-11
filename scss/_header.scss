@@ -1,0 +1,57 @@
+.nav {
+	position: relative;
+	border-bottom: 1px solid #FFF;
+	.logo {
+		width: 250px;
+		height: 40px;
+		img {
+			height: 100%;
+		}
+		@media (max-width: $media768) {
+			height: 24px;
+		}
+	}
+	.menu {
+		display: flex;
+		@media (max-width: $media768) {
+			display: none;
+		}
+	}
+	.menuBar {
+		display: none;
+		cursor: pointer;
+		width: 18px;
+		height: 18px;
+		background-image: url('../images/menu.png');
+		background-position: center center;
+		background-repeat: no-repeat;
+		@media (max-width: $media768) {
+			display: block;
+		}
+		&.open {
+			background-image: url('../images/X.png');
+		}
+	}
+	.mobileMenu {
+		position: absolute;
+		top: 65px;
+		left: 0;
+		width: 100%;
+		height: 0;
+		background: #020202;
+		overflow: hidden;
+		transition: 0.5s height;
+		z-index: 15;
+		&.active {
+			height: calc(100vh - 65px);
+		}
+		.mobileMenuList {
+			height: calc(100% - 150px);
+			font-size: 80px;
+			border-bottom: 1px solid #FFFFFF;
+		}
+		.mobileMenuFooter {
+			height: 150px;
+		}
+	}
+}

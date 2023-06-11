@@ -1,0 +1,325 @@
+.carousel {
+  .carouselTitle {
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1.2;
+    @media (max-width: $media768) {
+      font-size: 48px;
+    }
+  }
+  .carouselBtn {
+    font-size: 20px;
+    border: 1px solid #FFF;
+    border-radius: 16px;
+    font-weight: 900;
+    margin-bottom: 100px;
+  }
+  .carouselAnim {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      top: 100%;
+      @media (max-width: $media768) {
+        width: calc(100% / 3);
+      }
+      &:nth-child(1) {
+        right: 360px;
+        animation: slide-up-1 6s infinite linear;
+        @media (max-width: $media768) {
+          right: 66.66666%;
+        }
+      }
+      &:nth-child(2) {
+        right: 180px;
+        animation: slide-up-2 6s infinite linear;
+        @media (max-width: $media768) {
+          right: 33.33333%;
+        }
+      }
+      &:nth-child(3) {
+        right: 0;
+        animation: slide-up-3 6s infinite linear;
+        @media (max-width: $media768) {
+          right: 0%;
+        }
+      }
+    }
+  }
+}
+
+.introduce {
+  .introduceText {
+    flex-wrap: wrap;
+    .introduceTitle {
+      font-size: 32px;
+      width: 33.33333%;
+      @media (max-width: $media768) {
+        width: 100%;
+      }
+    }
+    .introduceContent {
+      font-size: 48px;
+      width: 66.66666%;
+      @media (max-width: $media768) {
+        width: 100%;
+        font-size: 32px;
+      }
+    }
+  }
+  .introduceCard {
+    height: 366px;
+    justify-content: space-between;
+    @media (max-width: $media768) {
+      flex-wrap: wrap;
+      justify-content: center;
+      height: auto;
+    }
+    .introduceCardItem {
+      width: calc(100% / 3 - 24px);
+      border: 1px solid #525252;
+      border-radius: 16px;
+      @media (max-width: $media768) {
+        width: 100%;
+      }
+      .cardIcon {
+        height: 68px;
+      }
+      .cardTitle {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+.evaluate {
+  .evaluateCard {
+    overflow: hidden;
+    .evaluateItem {
+      width: calc(100% / 3 - 24px);
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      @media (max-width: $media768) {
+        width: 100%;
+        &:nth-child(2), &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+    .evaluateText {
+      height: 215px;
+    }
+  }
+}
+
+.AI {
+  background: #FFFFFF;
+  border-radius: 160px;
+  @media (max-width: $media768) {
+    border-radius: 20px;
+  }
+  .search {
+    position: relative;
+    .searchInput {
+      width: 100%;
+      font-size: 16px;
+      background: #F2F2F2;
+      border: none;
+      border-radius: 16px;
+    }
+    .searchIcon {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+  }
+  .selectAI {
+    flex-wrap: wrap;
+    .filterAIListBtn {
+      position: relative;
+      border: 1px solid #F2F2F2;
+      border-radius: 16px;
+      user-select: none;
+      cursor: pointer;
+      @media (max-width: $media768) {
+        order: 1;
+      }
+      .filterAIList {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 240px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        background: #fff;
+        transition: 0.5s;
+        z-index: 10;
+        &.active {
+          display: block;
+        }
+        .AIItemTitle {
+          font-size: 12px;
+          color: #919191;
+          cursor: auto;
+        }
+        .hr {
+          width: 100%;
+          height: 1px;
+          background: #F2F2F2;
+          margin: 16px 0;
+        }
+        .AISelectList {
+          li {
+            &:hover {
+              background: #F2F2F2;
+            }
+          }
+        }
+      }
+    }
+    .AIItemList {
+      white-space: nowrap;
+      overflow: auto;
+      @media (max-width: $media768) {
+        order: 3;
+      }
+      .AIItem {
+        a {
+          color: #919191;
+          border-radius: 16px;
+          transition: 0.5s;
+          &.active {
+            color: #000;
+            background: #F2F2F2;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+    .filterTimeBtn {
+      position: relative;
+      border: 1px solid #F2F2F2;
+      border-radius: 16px;
+      user-select: none;
+      cursor: pointer;
+      @media (max-width: $media768) {
+        order: 2;
+      }
+      .filterTimeList {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 144px;
+        background: #FFFFFF;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        border-radius: 16px;
+        z-index: 10;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  .AICard {
+    flex-wrap: wrap;
+    padding: 1rem;
+    .AICardItem {
+      width: calc(33.3333% - 18px);
+      border: 1px solid #F2F2F2;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+    }
+    .AICardItem:hover img {
+      transform: scale(1.1);
+    }
+    .AICardTopImg img {
+      transition: 0.5s;
+    }
+    .AICardBody {
+      padding: 1.25rem 2rem;
+      margin-bottom: auto;
+    }
+    .AICardTitle {
+      font-size: 20px;
+    }
+    .AICardDescribe {
+      font-size: 14px;
+      color: #525252;
+    }
+    .AICardFooterItem {
+      padding: 1.25rem 2rem;
+    }
+    @media (max-width: $media768) {
+      .AICardBody, .AICardFooterItem {
+        padding: 0.75rem 1rem;
+      }
+      .AICardItem {
+        width: calc(50% - 0.5rem);
+        margin-bottom: 1rem;
+      }
+    }
+    @media (max-width: $media414) {
+      .AICardBody, .AICardFooterItem {
+        padding: 0.5rem 0.75rem;
+      }
+      .AICardItem {
+        width: 100%;
+      }
+    }
+
+  }
+}
+
+.service {
+  text-align: center;
+  .serviceTitle {
+    font-size: 48px;
+    @media (max-width: $media768) {
+      font-size: 32px;
+    }
+  }
+  .startUse {
+    font-size: 20px;
+    border: 1px solid #FFFFFF;
+    border-radius: 16px;
+  }
+}
+
+@keyframes slide-up-1 {
+  0% {
+    top: 100%;
+  }
+  45%, 90% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes slide-up-2 {
+  0% {
+    top: 100%;
+  }
+  30%, 85% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}
+@keyframes slide-up-3 {
+  0% {
+    top: 100%;
+  }
+  15%, 80% {
+    top: 0%;
+  }
+  100% {
+    top: -100%;
+  }
+}

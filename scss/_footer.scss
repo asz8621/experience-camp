@@ -1,0 +1,45 @@
+.footer {
+  .footerTop {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+    @media (max-width: $media768) {
+      flex-direction: column-reverse;
+    }
+    .footerLink {
+      font-size: 80px;
+      @media (max-width: $media768) {
+        font-size: 48px;
+      }
+    }
+    .logo {
+      width: 250px;
+      height: 40px;
+      img {
+        height: 100%;
+      }
+    }
+  }
+  // footerBottom copyright footerMedia goTop
+  .footerBottom {
+    @media (max-width: $media768) {
+      flex-wrap: wrap;
+    }
+    .copyright {
+      @media (max-width: $media768) {
+        width: 50%;
+      }
+    }
+    .footerMedia {
+      @media (max-width: $media768) {
+        width: 50%;
+        order: 3;
+      }
+    }
+    .goTop {
+      cursor: pointer;
+      @media (max-width: $media768) {
+        order: 2;
+      }
+    }
+  }
+}
