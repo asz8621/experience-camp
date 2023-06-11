@@ -104,9 +104,9 @@ img {
 }
 
 $colors: (
-  white: "#fff",
-  black: "#000",
-  dark: "#020202"
+  white: #fff,
+  black: #000,
+  dark: #020202,
 );
 
 @each $key, $value in $colors {
